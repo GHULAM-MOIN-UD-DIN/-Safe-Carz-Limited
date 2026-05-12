@@ -1,15 +1,22 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
 
-    document.querySelector('.menu-toggle').addEventListener('click', function () {
-        const menu = document.querySelector('.menu');
-        menu.classList.toggle('show');
+    if (menuToggle && menu) {
+        menuToggle.addEventListener('click', function () {
+            menu.classList.toggle('show');
+            this.innerHTML = menu.classList.contains('show') ? '✕' : '☰';
+        });
 
-        // Add animation for the menu opening
-        if (menu.classList.contains('show')) {
-            menu.style.animation = 'fadeInUp 0.5s ease-in-out';
-        } else {
-            menu.style.animation = 'none';
-        }
-    });
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+                menu.classList.remove('show');
+                menuToggle.innerHTML = '☰';
+            }
+        });
+    }
+});
 
 
 
@@ -203,10 +210,6 @@ function displayPlans() {
 }
 
 // Optional: Menu Toggle Function (if you plan to implement a menu toggle)
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('active');
-}
 function showPlans(vehicleType) {
     const plansContainer = document.getElementById('plans-container');
     plansContainer.style.display = 'block';

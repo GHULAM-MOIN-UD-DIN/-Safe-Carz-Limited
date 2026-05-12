@@ -15,41 +15,46 @@ body {
 header {
     background: linear-gradient(90deg, #1d3557, #457b9d);
     color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    animation: slideDown 1.2s ease-in-out;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    animation: slideDown 0.8s ease-out;
 }
 
 header h1 {
-    font-size: clamp(2.2rem, 5vw, 3rem);
-    margin-bottom: 10px;
-    letter-spacing: 2px;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin: 0;
+    letter-spacing: 1px;
+    flex: 1;
+    text-align: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 nav {
-    margin-top: 20px;
-    position: relative;
+    flex: 0;
 }
 
 /* Navbar Links */
 nav .menu {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 15px;
     padding: 0;
-    transition: transform 0.5s ease-in-out;
-    transform-origin: top;
-    animation: fadeInUp 1.2s ease-in-out;
+    margin: 0;
 }
 
 @keyframes fadeInUp {
@@ -66,15 +71,16 @@ nav .menu {
 nav .menu li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.2rem;
-    padding: 12px 25px;
+    font-size: 1rem;
+    padding: 8px 15px;
     border-radius: 5px;
-    transition: background-color 0.4s, transform 0.3s;
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 nav .menu li a:hover {
-    background-color: #4b86c9;
-    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
 
 /* Toggle Button */
@@ -82,34 +88,67 @@ button.menu-toggle {
     background-color: transparent;
     border: none;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.8rem;
     cursor: pointer;
     display: none;
-    position: absolute;
-    /* top: 100; */
-    right: 0;
-    bottom: 150px;
+    padding: 5px;
+    transition: transform 0.3s;
+}
+
+button.menu-toggle:active {
+    transform: scale(0.9);
 }
 
 /* Responsive Menu */
 @media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    button.menu-toggle {
+        display: block;
+    }
+
     nav .menu {
         display: none;
         flex-direction: column;
         background: #1d3557;
         position: absolute;
-        top: 0px;
-        right: 0;
+        top: 100%;
+        left: 0;
         width: 100%;
+        padding: 20px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        z-index: 999;
     }
 
     nav .menu.show {
         display: flex;
+        animation: slideInDown 0.3s ease-out;
     }
 
-    button.menu-toggle {
-        display: block; /* Show toggle button on smaller screens */
+    nav .menu li {
+        text-align: center;
+        width: 100%;
     }
+
+    nav .menu li a {
+        display: block;
+        padding: 15px;
+        font-size: 1.2rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+@keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 
@@ -135,21 +174,21 @@ h2 {
 
 /* Banner Section */
 .banner {
-    background: url('final.jpg') no-repeat center center/cover;
-    color: rgb(255, 255, 255);
-    text-align: start;
-    padding: 5rem 1rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
- margin-top: 0px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('final.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
 }
 
 .banner h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    margin-bottom: 20px;
 }
 
 .banner p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .intro {
@@ -161,14 +200,23 @@ h2 {
 /* CSS for h2 style and typing animation */
 .intro h2 {
     font-family: 'Arial', sans-serif;
-    font-size: 2.5rem;  /* Adjust as needed */
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
     font-weight: bold;
-    color: #003366;  /* Dark blue color */
+    color: #003366;
     text-align: center;
-    display: inline-block;  /* Keeps the typing effect on a single line */
-    overflow: hidden;  /* Hide the content that exceeds */
-    white-space: nowrap;  /* Prevent the text from wrapping */
-    animation: typing 4s steps(40) 0.5s forwards, blink-caret 0.75s step-end infinite;
+    margin: 0 auto 20px;
+    display: block;
+    overflow: hidden;
+    white-space: normal; /* Changed from nowrap to allow wrapping on mobile */
+    border-right: .15em solid orange;
+    width: fit-content;
+}
+
+@media (min-width: 769px) {
+    .intro h2 {
+        white-space: nowrap;
+        animation: typing 3s steps(40) 0.5s forwards, blink-caret 0.75s step-end infinite;
+    }
 }
 
 /* Typing effect */
