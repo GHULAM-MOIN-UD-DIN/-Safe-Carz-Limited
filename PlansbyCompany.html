@@ -1,0 +1,112 @@
+<!-- PlansbyCompany.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans by Company</title>
+    <link rel="stylesheet" href="PlanbyCompany.css">
+</head>
+<style>
+    .logo a img {
+    height: 60px;  /* Adjust the height to match the navbar height */
+    width: auto;   /* Keep the aspect ratio intact */
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="safe.png" alt="Logo"></a>
+        </div>
+        <h1>PLANS BY COMPANY</h1>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="PlansbyCompany.html">Plans by Company</a></li>
+                <li><a href="PlansbyVehicle.html">Plans by Vehicle</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+        <h1 style="background-color: #3a597e; text-align: center; color: white;">Insurance Plans</h1>
+    
+    <div class="container">
+        <div class="button-group">
+            <button onclick="filterPlans('zurich')">Zurich Insurance Plans</button>
+            <button onclick="filterPlans('allianz')">Allianz Insurance Plans</button>
+            <button onclick="filterPlans('metlife')">MetLife Insurance Plans</button>
+            <button onclick="filterPlans('all')">Show All Plans</button>
+        </div>
+
+        <div id="plans">
+            <div class="plan zurich">
+                <h2>Zurich Insurance - Plan A</h2>
+                <p><strong>Coverage:</strong> Comprehensive coverage for vehicles</p>
+                <p><strong>Price:</strong> $500 per year</p>
+                <p><strong>Details:</strong> Zurich Plan A offers extensive coverage for accidents, theft, and third-party liability.</p>
+            </div>
+            <div class="plan zurich">
+                <h2>Zurich Insurance - Plan B</h2>
+                <p><strong>Coverage:</strong> Basic accident and theft coverage</p>
+                <p><strong>Price:</strong> $300 per year</p>
+                <p><strong>Details:</strong> Zurich Plan B provides basic protection against accidents and vehicle theft.</p>
+            </div>
+            <div class="plan allianz">
+                <h2>Allianz Insurance - Plan A</h2>
+                <p><strong>Coverage:</strong> Full protection with accident, theft, and natural disasters</p>
+                <p><strong>Price:</strong> $550 per year</p>
+                <p><strong>Details:</strong> Allianz Plan A includes comprehensive coverage for accidents, theft, and natural disasters like floods.</p>
+            </div>
+            <div class="plan allianz">
+                <h2>Allianz Insurance - Plan B</h2>
+                <p><strong>Coverage:</strong> Accident and third-party coverage</p>
+                <p><strong>Price:</strong> $350 per year</p>
+                <p><strong>Details:</strong> Allianz Plan B provides coverage for accidents and third-party liability.</p>
+            </div>
+            <div class="plan metlife">
+                <h2>MetLife Insurance - Plan A</h2>
+                <p><strong>Coverage:</strong> Comprehensive protection with vehicle replacement</p>
+                <p><strong>Price:</strong> $600 per year</p>
+                <p><strong>Details:</strong> MetLife Plan A includes vehicle replacement coverage in case of total loss due to accidents or theft.</p>
+            </div>
+            <div class="plan metlife">
+                <h2>MetLife Insurance - Plan B</h2>
+                <p><strong>Coverage:</strong> Basic coverage for accidents</p>
+                <p><strong>Price:</strong> $400 per year</p>
+                <p><strong>Details:</strong> MetLife Plan B covers accidents, but does not include theft or vehicle replacement.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Safe Carz Limited is dedicated to providing reliable, safe, and high-quality vehicles tailored to your needs. With a focus on safety and customer satisfaction, we deliver exceptional service and a seamless car ownership experience. Your journey starts with us!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: safecarzlimited@gmail.com</p>
+                <p>Phone: +92 3130268012</p>
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/login.php/"><img src="https://thumbs.dreamstime.com/b/facebook-logo-vector-eps-file-squared-coloured-easily-editable-have-white-background-high-resolution-255557233.jpg" alt="Facebook Icon"></a>
+                    <a href="https://pk.linkedin.com/"><img src="https://static.vecteezy.com/system/resources/previews/016/716/470/non_2x/linkedin-icon-free-png.png" alt="Twitter Icon"></a>
+                    <a href="https://www.instagram.com/accounts/login/?hl=en"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram Icon"></a>
+                </div>
+            </div>
+            <div class="footer-section footer-location">
+                <h3>Location</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509354!2d144.95543131558267!3d-37.81720997975144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5773f1d9a6df317!2sFlinders%20St%20Station!5e0!3m2!1sen!2sau!4v1613995208949!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">&copy; 2025 Insurance Website. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

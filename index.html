@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Website - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    .logo a img {
+    height: 60px;  /* Adjust the height to match the navbar height */
+    width: auto;   /* Keep the aspect ratio intact */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="safe.png" alt="Logo"></a>
+        </div>
+        <h1>SAFE CARZ LIMITED</h1>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="PlansbyCompany.html">Plans by Company</a></li>
+                <li><a href="PlansbyVehicle.html">Plans by Vehicle</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <h1>Welcome to Our <br>  Safe Carz Limited</h1>
+        <p>Find the best insurance plans for your needs!</p>
+    </section>
+    
+    <!-- Intro Section -->
+<section class="intro">
+    
+
+    <h2>Why Choose Us?</h2>
+    <p>We offer a variety of insurance plans from top companies tailored for all types of vehicles and customers.</p>
+    <div class="icon-grid">
+        <div class="icon-item" onclick="openModal('supportModal')">
+            <img src="https://cdn-icons-png.flaticon.com/512/18307/18307197.png" alt="Support Icon">
+            <p>24/7 Support</p>
+        </div>
+        <div class="icon-item" onclick="openModal('affordableModal')">
+            <img src="logo.png" alt="Affordable Icon">
+            <p>Affordable Plans</p>
+        </div>
+        <div class="icon-item" onclick="openModal('coverageModal')">
+            <img src="why logo 2.jpg" alt="Coverage Icon">
+            <p>Comprehensive Coverage</p>
+        </div>
+        <div class="icon-item" onclick="openModal('claimsModal')">
+            <img src="logo 3.png" alt="Claims Icon">
+            <p>Fast Claims</p>
+        </div>
+    </div>
+</section>
+
+<!-- Modals -->
+<div id="supportModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('supportModal')">&times;</span>
+        <h3>24/7 Support</h3>
+        <p>24/7 support in the context of insurance is crucial for ensuring that policyholders have access to assistance whenever they need it, regardless of the time or day. Insurance companies offering 24/7 support can provide immediate help in emergencies, such as filing a claim after an accident, understanding coverage options, or answering policy-related questions. Whether it's a car accident in the middle of the night or needing clarification about a home insurance policy over the weekend, having round-the-clock support ensures that customers are never left without guidance during critical moments. This level of accessibility enhances customer satisfaction, builds trust, and demonstrates the insurer's commitment to being there for their clients, no matter the circumstances.</p> 
+    </div>
+</div>
+
+<div id="affordableModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('affordableModal')">&times;</span>
+        <h3>Affordable Plans</h3>
+        <p>Affordable plans are designed to offer individuals or businesses cost-effective options for essential services, such as insurance, healthcare, or subscription-based products. These plans focus on providing quality coverage or services at a price that fits within the budget of the target audience, without sacrificing essential benefits. In the context of insurance, affordable plans typically provide a range of coverage options with varying levels of premiums, deductibles, and benefits to suit different financial situations. The goal is to ensure that customers can obtain necessary protection while managing their expenses effectively. Affordable plans often come with flexible payment options, discounts, and additional perks to make them more accessible to a wider range of people, ensuring that everyone has the opportunity to secure essential services without financial strain..</p>
+    </div>
+</div>
+
+<div id="coverageModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('coverageModal')">&times;</span>
+        <h3>Comprehensive Coverage</h3>
+        <p>Comprehensive coverage is a type of auto insurance that provides protection for your vehicle against damages not caused by a collision. This includes events such as theft, vandalism, weather-related damage (like hail or floods), animal collisions, fire, and falling debris. It covers the cost of repair or replacement, minus a deductible, and is often required for leased or financed vehicles. While comprehensive coverage offers broad protection, it does not cover damages from collisions with other vehicles (which requires collision insurance) or personal injuries (which require medical coverage). It offers peace of mind by protecting your car from various unpredictable incidents beyond your control.</p>
+    </div>
+</div>
+
+<div id="claimsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('claimsModal')">&times;</span>
+        <h3>Fast Claims</h3>
+        <p>*Fast claims* refer to the process of efficiently and quickly handling and settling insurance claims. In the context of auto insurance, it means that when a policyholder files a claim for damages or losses, the insurance company processes the claim promptly, reducing the time it takes to resolve the issue. This often involves quick verification of the claim details, minimal paperwork, and timely compensation. Fast claims are essential for providing a smooth customer experience, ensuring that individuals get the financial support they need to repair or replace their vehicle as quickly as possible after an accident or damage. Insurers may offer online or mobile claims filing options, expedited approval processes, and direct deposit for faster payouts.</p>
+    </div>
+</div>
+
+
+    <!-- PlansbyCompany Section -->
+    <section class="PlansbyCompany">
+        <h2>Explore Our Plans</h2>
+        <div class="category-grid">
+            <a href="PlansbyCompany.html" class="category">By Company</a>
+            <a href="PlansbyVehicle.html" class="category">By Vehicle Type</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Safe Carz Limited is dedicated to providing reliable, safe, and high-quality vehicles tailored to your needs. With a focus on safety and customer satisfaction, we deliver exceptional service and a seamless car ownership experience. Your journey starts with us!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: safecarzlimited@gmail.com</p>
+                <p>Phone: +92 3130268012</p>
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/login.php/"><img src="https://thumbs.dreamstime.com/b/facebook-logo-vector-eps-file-squared-coloured-easily-editable-have-white-background-high-resolution-255557233.jpg" alt="Facebook Icon"></a>
+                    <a href="https://pk.linkedin.com/"><img src="https://static.vecteezy.com/system/resources/previews/016/716/470/non_2x/linkedin-icon-free-png.png" alt="Twitter Icon"></a>
+                    <a href="https://www.instagram.com/accounts/login/?hl=en"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram Icon"></a>
+                </div>
+            </div>
+            <div class="footer-section footer-location">
+                <h3>Location</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509354!2d144.95543131558267!3d-37.81720997975144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5773f1d9a6df317!2sFlinders%20St%20Station!5e0!3m2!1sen!2sau!4v1613995208949!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">&copy; 2025 Insurance Website. All rights reserved.</p>
+    </footer>
+
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>

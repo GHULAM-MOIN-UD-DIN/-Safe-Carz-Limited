@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans by Vehicle Type</title>
+    <link rel="stylesheet" href="PlansbyVehicle.css">
+    <style>
+           .logo a img {
+    height: 60px;  /* Adjust the height to match the navbar height */
+    width: auto;   /* Keep the aspect ratio intact */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="safe.png" alt="Logo"></a>
+        </div>
+        <h1>PLANS CATEGORIZED BY VEHICLE TYPES</h1>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="PlansbyCompany.html">Plans by Company</a></li>
+                <li><a href="PlansbyVehicle.html">Plans by Vehicle</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 style="background-color: #3a597e; text-align: center; color: white;">Select Vehicle Category</h1>
+
+    <!-- Circle options for Vehicle Types -->
+    <!-- <div class="vehicle-options">
+        <div class="vehicle-option" onclick="showPlans('two-wheeler')">
+            
+            Two Wheeler
+        </div>
+        <div class="vehicle-option" onclick="showPlans('four-wheeler')">
+            Four Wheeler
+        </div>
+    </div> -->
+    <div class="vehicle-options">
+        <div class="vehicle-option" onclick="showPlans('two-wheeler')">
+            <img src="https://cdn.britannica.com/16/126516-050-2D2DB8AC/Triumph-Rocket-III-motorcycle-2005.jpg" alt="Two Wheeler" style="height: 150px; width: 200px; background-size: cover; border-radius: 50%; display: flex; justify-content: center; font-weight: bold;">
+            
+        </div>
+        <div class="vehicle-option" onclick="showPlans('four-wheeler')">
+            <img src="https://hongsehleasing.sg/wp-content/uploads/2024/03/fit-2-1.png" alt="Four Wheeler" style="height: 200px; width: 200px; background-size: cover; border-radius: 50%; display: flex; justify-content: center; font-weight: bold;">
+            
+        </div>
+    </div>
+
+
+    <br><br>
+
+    <!-- Container for Displaying Plans -->
+    <div id="plans-container"></div>
+
+     <!-- Footer -->
+     <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Safe Carz Limited is dedicated to providing reliable, safe, and high-quality vehicles tailored to your needs. With a focus on safety and customer satisfaction, we deliver exceptional service and a seamless car ownership experience. Your journey starts with us!.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: safecarzlimited@gmail.com</p>
+                <p>Phone: +92 3130268012</p>
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/login.php/"><img src="https://thumbs.dreamstime.com/b/facebook-logo-vector-eps-file-squared-coloured-easily-editable-have-white-background-high-resolution-255557233.jpg" alt="Facebook Icon"></a>
+                    <a href="https://pk.linkedin.com/"><img src="https://static.vecteezy.com/system/resources/previews/016/716/470/non_2x/linkedin-icon-free-png.png" alt="Twitter Icon"></a>
+                    <a href="https://www.instagram.com/accounts/login/?hl=en"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram Icon"></a>
+                </div>
+            </div>
+            <div class="footer-section footer-location">
+                <h3>Location</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509354!2d144.95543131558267!3d-37.81720997975144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5773f1d9a6df317!2sFlinders%20St%20Station!5e0!3m2!1sen!2sau!4v1613995208949!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">&copy; 2025 Insurance Website. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
